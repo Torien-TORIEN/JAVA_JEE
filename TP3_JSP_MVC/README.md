@@ -9,7 +9,7 @@ Une Java Server Page (JSP) est une page html avec du code(Java) s’exécutant c
 - Les pages JSP sont peu adaptées à la gestion de la logique de l’application et à l’extension de fonctions du serveur.  
 
 ## Exemple du code :
-```<%-- Ceci est un commentaire JSP --%>
+``` <%-- Ceci est un commentaire JSP --%>
 <%@ page contentType="text/html" %>
 <%@ page errorPage="erreur.jsp" %>
 <%@ page import="java.util.*" %>
@@ -25,6 +25,6 @@ nombreVisites++; // portée de cette variable ?
 Au moment de l'exécution de cette jsp, nous sommes le <%= date %>.
 Cette page a été affichée <%= nombreVisites %> fois !
 </body>
-</html>```
+</html> ```
 
 
