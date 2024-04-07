@@ -27,21 +27,26 @@ public class CalculDeMonImc2 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Récupération des paramètres poids et taille
-        double poids = Double.parseDouble(request.getParameter("poids"));
-        double taille = Double.parseDouble(request.getParameter("taille"));
+		try {
+	        double poids = Double.parseDouble(request.getParameter("poids"));
+	        double taille = Double.parseDouble(request.getParameter("taille"));
+	     // Calcul de l'IMC
+	        this.monImc = new Imc(taille, poids);
+	        double imc = this.monImc.calcul();
+			
+			// Stockage des données dans la session
+		    HttpSession session = request.getSession();
+		    session.setAttribute("poids", poids);
+		    session.setAttribute("taille", taille);
+		    session.setAttribute("imc", imc);
+		    
+		 // Redirection vers la servlet TableauDeBord
+	        response.sendRedirect("TableauDeBord2");
+		}catch(Exception e){
+			response.sendRedirect("http://localhost:8080/MyProject/renseignement.html");
+		}
         
-        // Calcul de l'IMC
-        this.monImc = new Imc(taille, poids);
-        double imc = this.monImc.calcul();
-		
-		// Stockage des données dans la session
-	    HttpSession session = request.getSession();
-	    session.setAttribute("poids", poids);
-	    session.setAttribute("taille", taille);
-	    session.setAttribute("imc", imc);
-	    
-	 // Redirection vers la servlet TableauDeBord
-        response.sendRedirect("TableauDeBord2");
+        
 	}
 
 	/**

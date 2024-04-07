@@ -168,10 +168,13 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 
 ## Filter 
 
-### C'est Filter ? Son Role ?
+### C'est quoi  Filter ? Son Role ?
 Un Filter est un composant Java EE qui permet de traiter les requêtes HTTP avant qu'elles n'atteignent la servlet ou après qu'elles en soient sorties. Son rôle principal est de modifier ou d'enrichir le comportement standard des servlets en effectuant des opérations de prétraitement ou de post-traitement des requêtes et des réponses.
 
-### La structure 
+### Creation
+`New > Filter `
+
+### URL : @WebFilter("/MonFiltre")
 
 ### Les Methodes 
 Les méthodes principales de la classe Filter sont :
@@ -180,4 +183,48 @@ Les méthodes principales de la classe Filter sont :
 - `doFilter(ServletRequest request, ServletResponse response, FilterChain chain)`: Cette méthode est appelée pour chaque requête qui passe à travers le Filter. C'est là que le traitement spécifique du Filter est effectué.  
 - `destroy()`: Cette méthode est appelée par le conteneur de servlets lors de l'arrêt du Filter. Elle est utilisée pour effectuer toute opération de nettoyage nécessaire.  
 
-### 
+###
+	package peter.zaineb;
+
+	import java.io.IOException;
+	import javax.servlet.ServletException;
+	import javax.servlet.annotation.WebServlet;
+	import javax.servlet.http.HttpServlet;
+	import javax.servlet.http.HttpServletRequest;
+	import javax.servlet.http.HttpServletResponse;
+	import javax.servlet.http.HttpSession;
+
+	/**
+	 * Servlet implementation class CalculImcDeMonImcCookie2
+	 */
+	@WebServlet("/CalculImcDeMonImcCookie2")
+	public class CalculImcDeMonImcCookie2 extends HttpServlet {
+		private static final long serialVersionUID = 1L;
+		   
+		/**
+		 * @see HttpServlet#HttpServlet()
+		 */
+		public CalculImcDeMonImcCookie2() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		/**
+		 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			// TODO Auto-generated method stub
+			//response.getWriter().append("Served at: ").append(request.getContextPath());
+			HttpSession session = request.getSession();
+			session.setAttribute("Imc",new Imc(94,1.86));
+		}
+
+		/**
+		 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+		 */
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			// TODO Auto-generated method stub
+			doGet(request, response);
+		}
+
+	}

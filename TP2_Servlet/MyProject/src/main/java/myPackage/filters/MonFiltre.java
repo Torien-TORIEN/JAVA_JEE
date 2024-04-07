@@ -43,7 +43,7 @@ public class MonFiltre extends HttpFilter implements Filter {
 		// place your code here
 		HttpSession session =((javax.servlet.http.HttpServletRequest)request).getSession();
 		if(session.getAttribute("poids")==null || session.getAttribute("taille")==null || session.getAttribute("imc")==null) {
-			((HttpServletResponse)response).sendRedirect("http://localhost:8080/MonProjet/CalculImcDeMonImc2");
+			((HttpServletResponse)response).sendRedirect("http://localhost:8080/MyProject/CalculDeMonImc2");
 		}else {
 			// pass the request along the filter chain
 			chain.doFilter(request, response);
