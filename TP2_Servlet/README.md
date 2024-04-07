@@ -57,5 +57,93 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 
 ## COKIES 
 
+### Ecriture 
+- Import
+	import javax.servlet.http.Cookie;
+
+- Declaration et ajout `new Cookie("String_key", "String_value")`
+# 
+	// Création des cookies
+	double poids=70;
+	double taille=1.73;
+	double imc=23.39;
+	Cookie cookiePoids = new Cookie("poids", Double.toString(poids));
+	Cookie cookieTaille = new Cookie("taille", Double.toString(taille));
+	Cookie cookieImc = new Cookie("imc", Double.toString(imc));
+
+- Ajoutt dans la reponse
+#	
+	response.addCookie(cookiePoids);
+    response.addCookie(cookieTaille);
+    response.addCookie(cookieImc);
+
+- Redirection 
+#
+	// Redirection vers la servlet TableauDeBord
+    response.sendRedirect("TableauDeBord");
+
+#### Exemple 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+        
+        // Récupération des paramètres poids et taille
+        double poids = Double.parseDouble(request.getParameter("poids"));
+        double taille = Double.parseDouble(request.getParameter("taille"));
+        
+        // Calcul de l'IMC
+        this.monImc = new Imc(taille, poids);
+        double imc = this.monImc.calcul();
+        
+        // Création des cookies
+        Cookie cookiePoids = new Cookie("poids", Double.toString(poids));
+        Cookie cookieTaille = new Cookie("taille", Double.toString(taille));
+        Cookie cookieImc = new Cookie("imc", Double.toString(imc));
+        
+        // Ajout des cookies à la réponse
+        response.addCookie(cookiePoids);
+        response.addCookie(cookieTaille);
+        response.addCookie(cookieImc);
+        
+        // Redirection vers la servlet TableauDeBord
+        response.sendRedirect("TableauDeBord");
+		
+	}
+
+
+### Lecture des cookies
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        
+        // Récupération des cookies
+        Cookie[] cookies = request.getCookies();
+        double poids = 0, taille = 0, imc = 0;
+        
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("poids")) {
+                    poids = Double.parseDouble(cookie.getValue());
+                } else if (cookie.getName().equals("taille")) {
+                    taille = Double.parseDouble(cookie.getValue());
+                } else if (cookie.getName().equals("imc")) {
+                    imc = Double.parseDouble(cookie.getValue());
+                }
+            }
+        }
+        
+        PrintWriter out = response.getWriter();
+        out.println("<!DOCTYPE html>"
+                + "<html>"
+                + "<head>"
+                + "<title>Tableau de Bord</title>"
+                + "</head>"
+                + "<body>"
+                + "<h1>Tableau de Bord</h1>"
+                + "<p>Poids : " + poids + "</p>"
+                + "<p>Taille : " + taille + "</p>"
+                + "<p>IMC : " + imc + "</p>"
+                + "</body>"
+                + "</html>");
+    }
+
 
 ## SESSIONS
