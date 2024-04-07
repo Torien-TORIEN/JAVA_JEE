@@ -10,29 +10,29 @@ Ce répertoire contient les travaux pratiques réalisés dans le cadre du cours 
 
 ## TP2 Première Application Web Dynamique en JEE
 
-**[Support de cours]((https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/cours2.pdf) :** introduction aux servlets et à leur cycle de vie.  
+**[Support de cours](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/cours2.pdf) :** introduction aux servlets et à leur cycle de vie.  
 **[Travaux Pratiques](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/tp2.pdf) :** Création d'une servlet, utilisation des méthodes HTTP GET et gestion de sessions.  
 **Mots-clés :** Protocole HTTP, introduction aux annotations, Threads, Cycle de vie d'une servlet.
 
 ## TP3 Premier MVC avec JSP, EL et Javabeans
 
-**[Support de cours]((https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/cours3.pdf) :** [Support_TP3.pdf](lien_vers_le_support_TP3.pdf)  
+**[Support de cours](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/cours3.pdf) :** [Support_TP3.pdf](lien_vers_le_support_TP3.pdf)  
 **[Travaux Pratiques](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/tp3.pdf) :** Implémentation du modèle MVC, utilisation des JSP, Expression Language (EL) et JavaBeans pour la validation de formulaires côté serveur.  
 **Mots-clés :** MVC, classe métier, Expression Language, requestDispatcher.
 
 ## TP4 Persistance de données avec JPA - Objet Relationnel Mapping
 
-**Support de cours :** [Support_TP4.pdf](lien_vers_le_support_TP4.pdf)  
-**Travaux Pratiques :** Utilisation de JPA avec Hibernate pour la persistance de données.  
+**[Support de cours](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/cours4.pdf) :**  Introduction à la persistance de données en java.  
+**[Travaux Pratiques](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/tp4.pdf) :** Utilisation de JPA avec Hibernate pour la persistance de données.  
 **Mots-clés :** JDBC, JPA, JPQL, DAO, requêtes précompilées.
 
 ## TP5 Web service SOAP et RESTFul avec JAX-RS
 
-**Support de cours :** [Support_TP5.pdf](lien_vers_le_support_TP5.pdf)  
-**Travaux Pratiques :** Introduction à RESTful avec JAX-RS.  
+**[Support de cours](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/cours5.pdf):** Introduction à RESTful avec JAX-RS. 
+**[Travaux Pratiques](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/tp5.pdf) :** Introduction à RESTful avec JAX-RS.  
 **Mots-clés :** JAX-RS, JAXB, API REST.
 
-## TP6 Intégration des compétences (Évaluation)
+## TP6 Intégration des compétences ([Évaluation](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/tp6.pdf))
 
 Ce TP consiste en une évaluation intégrant les compétences acquises lors des TP précédents.
 
