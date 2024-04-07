@@ -150,3 +150,16 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 
 
 ## SESSIONS
+
+### Ecriture 
+	// Stockage des données dans la session
+	HttpSession session = request.getSession();
+	session.setAttribute("poids", poids);
+	session.setAttribute("taille", taille);
+	session.setAttribute("imc", imc);
+
+### Lecture 
+	HttpSession session = request.getSession();
+	double poids = (double) session.getAttribute("poids");
+	double taille = (double) session.getAttribute("taille");
+	double imc = (double) session.getAttribute("imc");
