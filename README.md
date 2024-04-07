@@ -1,4 +1,5 @@
 # TRAVAUX PRATIQUES DU [COURS Java Entreprise Edition](https://perso-laris.univ-angers.fr/~delanoue/polytech/jee/)
+![logo](assets/logo.png)
 
 Ce répertoire contient les travaux pratiques réalisés dans le cadre du cours de Java JEE à Polytech Angers. L'objectif est de maîtriser les technologies Java EE, largement utilisées dans le monde du travail.
 
