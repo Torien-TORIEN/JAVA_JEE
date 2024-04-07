@@ -76,7 +76,7 @@ Ceci indique que le serveur Tomcat est lancé
 
 
 # Creation de projet : web dynamic project 
-
+![Tomcat Lancer ](../assets/TP1_create_project.png)
 - Attention ne pas laisser `Target Runtime : None ` sinon vous allez avoir des problèemes pour lancer ce projet  
 - Il faut donc selectionner le `serveur Tomcat `  
 ![Tomcat Lancer ](../assets/TP1_web_dynamic.png)
