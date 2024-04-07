@@ -85,4 +85,7 @@ Une Java Server Page (JSP) est une page html avec du code(Java) s’exécutant c
 
 
 
+# Créer un projet 
+`File > New > Dynamyc web Project ` dans webapp Créer des fichier jsp
+
 
