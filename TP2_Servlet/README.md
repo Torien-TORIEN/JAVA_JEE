@@ -167,3 +167,17 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 
 
 ## Filter 
+
+### C'est Filter ? Son Role ?
+Un Filter est un composant Java EE qui permet de traiter les requêtes HTTP avant qu'elles n'atteignent la servlet ou après qu'elles en soient sorties. Son rôle principal est de modifier ou d'enrichir le comportement standard des servlets en effectuant des opérations de prétraitement ou de post-traitement des requêtes et des réponses.
+
+### La structure 
+
+### Les Methodes 
+Les méthodes principales de la classe Filter sont :
+
+- `init(FilterConfig config)`: Cette méthode est appelée par le conteneur de servlets lors de l'initialisation du Filter. Elle est utilisée pour effectuer toute initialisation nécessaire.  
+- `doFilter(ServletRequest request, ServletResponse response, FilterChain chain)`: Cette méthode est appelée pour chaque requête qui passe à travers le Filter. C'est là que le traitement spécifique du Filter est effectué.  
+- `destroy()`: Cette méthode est appelée par le conteneur de servlets lors de l'arrêt du Filter. Elle est utilisée pour effectuer toute opération de nettoyage nécessaire.  
+
+### 
