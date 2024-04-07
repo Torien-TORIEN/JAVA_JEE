@@ -53,4 +53,9 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 
 ### Type de la reponse 
 	response.setContentType("text/html");
+	
 
+## COKIES 
+
+
+## SESSIONS
