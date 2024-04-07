@@ -53,7 +53,24 @@ public class CalculDeMonImc extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		// Type du retour
+				response.setContentType("text/html");
+				//Get parametters
+				float poids=Float.parseFloat(request.getParameter("poids"));
+				float taille=Float.parseFloat(request.getParameter("taille"));
+				// Writter
+				PrintWriter out = response.getWriter();
+				
+				out.println("<!DOCTYPE html>"
+						+ "<html>"
+						+ "<head>"
+						+ "<title>Example</title>"
+						+ "</head>"
+						+ "<body>"
+						+ "<p> La masse corporelle est "+poids/(taille*taille)+"</p>"
+						+ "</body>"
+						+ "</html>");
 	}
 
 }
