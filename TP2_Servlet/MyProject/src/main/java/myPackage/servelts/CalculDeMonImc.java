@@ -1,5 +1,7 @@
 package myPackage.servelts;
 
+import myPackage.metiers.*;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +17,8 @@ import java.io.PrintWriter;
 @WebServlet("/CalculDeMonImc")
 public class CalculDeMonImc extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private Imc monImc;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -30,9 +34,10 @@ public class CalculDeMonImc extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Type du retour
 		response.setContentType("text/html");
-		//Get parametters
-		float poids=Float.parseFloat(request.getParameter("poids"));
-		float taille=Float.parseFloat(request.getParameter("taille"));
+		
+		//Declarer Imc 
+		this.monImc=new Imc(Double.parseDouble(request.getParameter("taille")),Double.parseDouble(request.getParameter("poids")));
+		
 		// Writter
 		PrintWriter out = response.getWriter();
 		
@@ -42,7 +47,7 @@ public class CalculDeMonImc extends HttpServlet {
 				+ "<title>Example</title>"
 				+ "</head>"
 				+ "<body>"
-				+ "<p> La masse corporelle est "+poids/(taille*taille)+"</p>"
+				+ "<p> La masse corporelle est "+this.monImc.calcul()+"</p>"
 				+ "</body>"
 				+ "</html>");
 		
