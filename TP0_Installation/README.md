@@ -73,3 +73,10 @@
 - Maintenant Vous pouvez lancer et arreter le serveur Tomacat avec les boutons qui sont en haut à droite  
 ![Tomcat Lancer ](../assets/TP1_started_tomcat.png)
 Ceci indique que le serveur Tomcat est lancé 
+
+
+# Creation de projet : web dynamic project 
+
+- Attention ne pas laisser `Target Runtime : None ` sinon vous allez avoir des problèemes pour lancer ce projet  
+- Il faut donc selectionner le `serveur Tomcat `  
+![Tomcat Lancer ](../assets/TP1_web_dynamic.png)
