@@ -80,3 +80,19 @@ Ceci indique que le serveur Tomcat est lancé
 - Attention ne pas laisser `Target Runtime : None ` sinon vous allez avoir des problèemes pour lancer ce projet  
 - Il faut donc selectionner le `serveur Tomcat `  
 ![Tomcat Lancer ](../assets/TP1_web_dynamic.png)
+
+- Dans Le dossier `WebContent ou Webapp`  créer un fichier  `index.html`  
+##
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	</head>
+	<body>
+		<h1> My First Web Dynamic project </h1>
+	</body>
+	</html>
+
+- Lancer le projet (Run on server )
+![Tomcat Lancer ](../assets/TP1_html.png)
