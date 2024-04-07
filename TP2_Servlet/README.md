@@ -163,3 +163,7 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 	double poids = (double) session.getAttribute("poids");
 	double taille = (double) session.getAttribute("taille");
 	double imc = (double) session.getAttribute("imc");
+	
+
+
+## Filter 
