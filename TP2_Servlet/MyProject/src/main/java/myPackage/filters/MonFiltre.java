@@ -9,11 +9,15 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import myPackage.metiers.Imc;
 
 /**
  * Servlet Filter implementation class MonFiltre
  */
-@WebFilter("/MonFiltre")
+@WebFilter("/TableauDeBord2")
 public class MonFiltre extends HttpFilter implements Filter {
        
     /**
@@ -37,9 +41,13 @@ public class MonFiltre extends HttpFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-
-		// pass the request along the filter chain
-		chain.doFilter(request, response);
+		HttpSession session =((javax.servlet.http.HttpServletRequest)request).getSession();
+		if(session.getAttribute("poids")==null || session.getAttribute("taille")==null || session.getAttribute("imc")==null) {
+			((HttpServletResponse)response).sendRedirect("http://localhost:8080/MonProjet/CalculImcDeMonImc2");
+		}else {
+			// pass the request along the filter chain
+			chain.doFilter(request, response);
+		}
 	}
 
 	/**
