@@ -16,6 +16,6 @@
 	
 	
 		Le nombre aléatoire généré est <%= randomNumber %>. <br>
-		<a href="/TP3_exo1/q2_aleatoire.jsp">Recommencer !</a>
+		<a href="<%= request.getRequestURI() %>">Recommencer !</a>
 	</body>
 </html>
