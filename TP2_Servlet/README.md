@@ -111,6 +111,9 @@ Un servlet est une classe Java qui s'exécute sur le côté serveur pour gérer 
 
 
 ### Lecture des cookies
+- reçoit tableau de cookie   
+- Acceder au cookie :`cookie.getName()`  
+#### Exemple 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         
