@@ -7145,3 +7145,11 @@ org.eclipse.core.runtime.OperationCanceledException
 
 !ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-19 04:11:13.390
 !MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jdt.launching 4 150 2024-04-19 04:29:51.073
+!MESSAGE The archive: /jpaTest/MesLibrairies/antlr-2.7.7.jar which is referenced by the classpath, does not exist.
+
+!ENTRY org.eclipse.ui.ide 2 4 2024-04-19 04:30:02.283
+!MESSAGE Problems occurred closing the selected resources.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-04-19 04:30:02.283
+!MESSAGE The project description file (.project) for 'jpaTest' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
